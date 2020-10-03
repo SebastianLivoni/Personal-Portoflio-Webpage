@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Comfortaa', cursive;
+  height: 100%;
+}
+
+body {
+  color: #F8F8F8;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  height: 85px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 20px;
+}
+.navbar .logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.navbar .logo-wrapper .logo-heading {
+  margin-left: 15px;
+}
+.navbar .navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 60%;
+}
+.navbar .navigation li {
+  display: flex;
+  list-style: none;
+  padding: 12px 15px;
+}
+.navbar .navigation li a {
+  text-decoration: none;
+  color: #F8F8F8;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar .navigation a {
+  position: relative;
+}
+
+.navbar .navigation li a:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #C3073F;
+  width: 0;
+  position: absolute;
+  left: 0;
+  margin-top: 4px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.navbar .navigation li a:hover:after {
+  width: 100%;
+}
+
+.navbar-logo {
+  border-radius: 50%;
+  height: 75px;
+  width: auto;
+}
+
+#welcome-section {
+  display: flex;
+  height: 100vh;
+  background: #1A1A1D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcome-section h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+#welcome-section h2 {
+  font-size: 1.5em;
+}
+
+.welcome-social p {
+  margin-top: 15px;
+}
+.welcome-social i {
+  color: #F8F8F8;
+}
+.welcome-social i:hover {
+  color: #C3073F;
+}
+
+#about-section {
+  height: 100vh;
+  background-color: #4E4E50;
+}
+
+#work-section {
+  height: 100vh;
+  background: #F8F8F8;
+  color: #222222;
+}
+
+#work-section .work-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#work-section .work-wrapper header {
+  margin-top: 40px;
+  width: 540px;
+  text-align: center;
+}
+#work-section .work-wrapper header h1 {
+  justify-content: center;
+  font-size: 2em;
+  border-bottom: 2px solid #222222;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+#projects .project-tile {
+  background: #1A1A1D;
+  margin: 25px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.project-image {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 24px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.code {
+  color: #1A1A1D;
+}
+
+.project:hover .code {
+  color: #C3073F;
+  transition: color 0.3s ease-out;
+  font-weight: bold;
+}
+
+@media only screen and (max-height: 400px) {
+  #welcome-section {
+    height: 400px;
+  }
+}
