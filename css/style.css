@@ -22,7 +22,7 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 10px 5px;
 }
 .navbar .logo-wrapper {
   display: flex;
@@ -278,4 +278,27 @@ a.return-to-top {
 a.return-to-top:hover {
   background-color: #C3073F;
   mix-blend-mode: difference;
+}
+
+@media only screen and (max-width: 1400px) {
+  .navbar {
+    background-color: #1A1A1D;
+    color: white;
+  }
+  #projects .project-tile img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .navbar .logo-wrapper .logo-heading {
+    font-size: 14px;
+  } 
+
+  .navbar .navigation a {
+    font-size: 14px;
+  }
+
+  .copyright-wrapper {
+    font-size: 12px;
+  }
 }
