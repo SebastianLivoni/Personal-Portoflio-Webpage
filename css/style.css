@@ -24,6 +24,11 @@ body {
   z-index: 10;
   padding: 10px 10px 10px 5px;
 }
+
+#projects a {
+  text-decoration: none;
+}
+
 .navbar .logo-wrapper {
   display: flex;
   align-items: center;
