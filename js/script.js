@@ -7,6 +7,17 @@ $("a").click(function() {
     }, 250);
 });
 
+// Return to top
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        $(".return-to-top").css({"opacity":"1"});   
+    }
+    else {
+        $(".return-to-top").css({"opacity":"0"});   
+    }
+});
+
 /*$(document).ready(function(){
     $(window).scroll(function(){
         if($(window).scrollTop() > $(window).height() - 50){

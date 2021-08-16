@@ -32,85 +32,91 @@
 </head>
 <body>
 
-<!-- With inspiration from https://lambocreeper.uk and freeCodeCamp's own example -->
+  <!-- With inspiration from https://lambocreeper.uk and freeCodeCamp's own example -->
 
-<header id="header">
-  <nav class="navbar" id="navbar">
-    <div class="logo-wrapper">
-      <img class="navbar-logo" alt="Personal Logo" src="./img/pb.jpg">
-      <h3 class="logo-heading">Sebastian Livoni</h3>
-    </div>
-    <ul class="navigation">
-      <li><a id="test" href="#work-section">My Work</a></li>
-      <li><a href="#about-section">About Me</a></li>
-      <li><a href="#contact-me">Contact Me</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <section id="welcome-section">
-    <div id="welcome-wrapper">
-      <div class="welcome-content">
-        <h1>Hey, I'm Sebastian</h1>
-        <h2>an upcoming full stack developer.</h2>
+  <header id="header">
+    <nav class="navbar" id="navbar">
+      <div class="logo-wrapper">
+        <img class="navbar-logo" alt="Personal Logo" src="./img/pb.jpg">
+        <h3 class="logo-heading">Sebastian Livoni</h3>
       </div>
-      <div class="welcome-social">
-        <p>
-          <a href="https://twitter.com/LivoniSebastian" target="_blank" id="profile-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/SebastianLivoni" target="_blank" id="profile-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.freecodecamp.org/livoni" data-tooltip="freeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
-          <a href="mailto:contact@livon.dk" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
-        </p>
-      </div>
-    </div>
-  </section>
-  <section id="work-section">
-    <div class="work-wrapper">
-      <header>
-        <h1>These are some of my projects</h1>
-      </header>
-    </div>
-    <div id="projects">
-      <div class="project-tile">
-        <img src="./img/tribute_page.png">
-        <div class="project-title">
-          <p>Tribute Page</p>
+      <ul class="navigation">
+        <li><a id="test" href="#work-section">My Work</a></li>
+        <li><a href="#about-section">About Me</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="welcome-section">
+      <div id="welcome-wrapper">
+        <div class="welcome-content">
+          <h1>Hey, I'm Sebastian</h1>
+          <h2>an upcoming full stack developer.</h2>
+        </div>
+        <div class="welcome-social">
+          <p>
+            <a href="https://twitter.com/LivoniSebastian" target="_blank" id="profile-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/SebastianLivoni" target="_blank" id="profile-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.freecodecamp.org/livoni" data-tooltip="freeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
+            <a href="mailto:contact@livon.dk" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
+          </p>
         </div>
       </div>
-      <div class="project-tile">
-        <img src="./img/personal_portfolio.png">
-        <div class="project-title">
-          <p>Personal Portfolio</p>
+    </section>
+    <section id="work-section">
+      <div class="work-wrapper">
+        <header>
+          <h1>These are some of my projects</h1>
+        </header>
+      </div>
+      <div id="projects">
+        <div class="project-tile">
+          <img src="./img/tribute_page.png">
+          <div class="project-title">
+            <p>Tribute Page</p>
+          </div>
+        </div>
+        <div class="project-tile">
+          <img src="./img/personal_portfolio.png">
+          <div class="project-title">
+            <p>Personal Portfolio</p>
+          </div>
+        </div>
+        <div class="project-tile">
+          <img src="https://via.placeholder.com/350">
+          <div class="project-title">
+            <p>TBA</p>
+          </div>
         </div>
       </div>
-      <div class="project-tile">
-        <img src="https://via.placeholder.com/350">
-        <div class="project-title">
-          <p>TBA</p>
-        </div>
+    </section>
+    <section id="about-section">
+      <div class="about-wrapper">
+        <header>
+          <h1><span>Who am I?</span></h1>
+        </header>
       </div>
+      <div class="aboutme">
+        <p>I'm Sebastian <strong style="font-weight: bold;">Livoni</strong>, a 19-year-old guy from Denmark who is in the process of learning full stack development. I have a great interest in all kinds of music and enjoy playing simulation games and Minecraft.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright-wrapper">
+      <p id="copyright">© Copyright 2021. All rights reserved. Made with <i class="fas fa-heart" style="color: red;"></i> by Livoni</p>
     </div>
-  </section>
-  <section id="about-section">
-    <div class="about-wrapper">
-      <header>
-        <h1><span>Who am I?</span></h1>
-      </header>
-    </div>
-    <div class="aboutme">
-      <p>I'm Sebastian <strong style="font-weight: bold;">Livoni</strong>, a 19-year-old guy from Denmark who is in the process of learning full stack development. I have a great interest in all kinds of music and enjoy playing simulation games and Minecraft.</p>
-    </div>
-  </section>
-</main>
-<footer>
-  <div class="copyright-wrapper">
-    <p id="copyright">© Copyright 2021. All rights reserved. Made with <i class="fas fa-heart" style="color: red;"></i> by Livoni</p>
-  </div>
-</footer>
-<!-- partial -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/script.js"></script>
-<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+  </footer>
+
+  <a class="return-to-top" href="#welcome-section">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- partial -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
 
 </body>
 </html>

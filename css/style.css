@@ -254,3 +254,25 @@ body {
   transform: scale3d(1,1,1);
   transition: all .2s .1s ease-in-out;
 }
+
+.return-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background-color: #1A1A1D;
+  padding: 10px 12px;
+  opacity: 0;
+  transform: scale3d(1,1,1);
+  transition: all .1s .1s ease-in-out;
+  animation: popout .1s ease;
+  -webkit-animation: popout .1s ease;
+}
+
+a.return-to-top {
+  text-decoration: none;
+  color: white;
+}
+
+a.return-to-top:hover {
+  background-color: #C3073F;
+}
