@@ -114,7 +114,7 @@ body {
   height: 100vh;
   background: #F8F8F8;
   color: #222222;
-  min-height: 800px;
+  min-height: 700px;
 }
 
 #work-section .work-wrapper, #about-section .about-wrapper {
@@ -148,8 +148,8 @@ body {
 }
 
 #projects .project-tile img {
-  height: 500px;
-  width: 500px;
+  height: 350px;
+  width: 350px;
   object-fit: cover;
 }
 
