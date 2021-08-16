@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Comfortaa', cursive;
+  height: 100%;
+}
+
+body {
+  color: #F8F8F8;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  height: 85px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 10px 10px 0 10px;
+}
+.navbar .logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.navbar .logo-wrapper .logo-heading {
+  margin-left: 15px;
+}
+.navbar .navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 60%;
+}
+.navbar .navigation li {
+  display: flex;
+  list-style: none;
+  padding: 12px 15px;
+}
+.navbar .navigation li a {
+  text-decoration: none;
+  color: #F8F8F8;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar .navigation a {
+  position: relative;
+}
+
+.navbar .navigation li a:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #C3073F;
+  width: 0;
+  position: absolute;
+  left: 0;
+  margin-top: 4px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.navbar .navigation li a:hover:after {
+  width: 100%;
+}
+
+.navbar-logo {
+  border-radius: 50%;
+  height: 75px;
+  width: auto;
+}
+
+#welcome-section {
+  display: flex;
+  height: 100vh;
+  background: #1A1A1D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcome-section h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+#welcome-section h2 {
+  font-size: 1.5em;
+}
+
+.welcome-social p {
+  margin-top: 15px;
+}
+.welcome-social i {
+  color: #F8F8F8;
+}
+.welcome-social i:hover {
+  color: #C3073F;
+}
+
+#about-section {
+  background-color: #C3073F;
+  min-height: 450px;
+}
+
+#work-section {
+  height: 100vh;
+  background: #F8F8F8;
+  color: #222222;
+  min-height: 650px;
+}
+
+#work-section .work-wrapper, #about-section .about-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#work-section .work-wrapper header, #about-section .about-wrapper header {
+  margin-top: 55px;
+  width: 540px;
+  text-align: center;
+}
+#work-section .work-wrapper header h1 {
+  justify-content: center;
+  font-size: 2em;
+  border-bottom: 2px solid #222222;
+}
+
+#about-section .about-wrapper h1 span {
+  justify-content: center;
+  border-bottom: 2px solid white;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#projects .project-tile {
+  background-color: #1A1A1D;
+  margin: 0 20px;
+}
+
+#projects .project-tile img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+#projects .project-title {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1A1A1D;
+  color: white;
+}
+
+
+@media only screen and (max-height: 400px) {
+  #welcome-section {
+    height: 400px;
+  }
+}
+
+.copyright-wrapper {
+  padding: 25px;
+  text-align: center;
+  background-color: #1A1A1D
+}
+
+.aboutme {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+/* Tooltip */
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  top: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -40px;
+  padding: 7px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #C3073F;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  transform: scale3d(.2,.2,1);
+  transition: all .2s ease-in-out;
+  white-space: nowrap;
+}
+
+
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  margin-top: -5px;
+  border-right: 6px solid transparent;
+	border-bottom: 6px solid #C3073F; 
+  border-left: 6px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+  transform: translate3d(0,6px,0);
+  transition: all .1s ease-in-out;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  transform: scale3d(1,1,1);
+  transition: all .2s .1s ease-in-out;
+}
