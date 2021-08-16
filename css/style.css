@@ -114,7 +114,7 @@ body {
   height: 100vh;
   background: #F8F8F8;
   color: #222222;
-  min-height: 650px;
+  min-height: 800px;
 }
 
 #work-section .work-wrapper, #about-section .about-wrapper {
@@ -148,8 +148,8 @@ body {
 }
 
 #projects .project-tile img {
-  height: 350px;
-  width: 350px;
+  height: 500px;
+  width: 500px;
   object-fit: cover;
 }
 
@@ -255,11 +255,13 @@ body {
   transition: all .2s .1s ease-in-out;
 }
 
+
 .return-to-top {
   position: fixed;
-  right: 25px;
-  bottom: 25px;
+  right: 15px;
+  bottom: 15px;
   background-color: #1A1A1D;
+  mix-blend-mode: difference;
   padding: 10px 12px;
   opacity: 0;
   transform: scale3d(1,1,1);
@@ -275,4 +277,5 @@ a.return-to-top {
 
 a.return-to-top:hover {
   background-color: #C3073F;
+  mix-blend-mode: difference;
 }

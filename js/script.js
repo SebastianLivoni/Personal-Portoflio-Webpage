@@ -18,7 +18,9 @@ $(window).scroll(function() {
     }
 });
 
-/*$(document).ready(function(){
+// navbar color changing
+
+$(document).ready(function(){
     $(window).scroll(function(){
         if($(window).scrollTop() > $(window).height() - 50){
             $("#navbar a").css({"color":"#1A1A1D"});   
@@ -30,11 +32,8 @@ $(window).scroll(function() {
         }
 
     })
-})*/
+})
 
 /* 
-- Tooltips
-- Scroll to top
 - Navbar color switch
-- Navbar scroll to animation 
 */
