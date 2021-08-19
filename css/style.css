@@ -10,14 +10,6 @@ html {
   height: 100%;
 }
 
-.test a {
-  position: fixed;
-  left: 100px;
-  top: 100px;
-  color: #F8F8F8;
-  mix-blend-mode: difference;
-}
-
 body {
   color: #F8F8F8;
 }
@@ -25,12 +17,13 @@ body {
 .navbar {
   display: flex;
   width: 100%;
-  position: fixed;
   height: 85px;
   top: 0;
   left: 0;
   z-index: 10;
   padding: 10px 10px 10px 5px;
+  position: fixed;
+  mix-blend-mode: difference;
 }
 
 #projects a {
@@ -41,6 +34,16 @@ body {
   display: flex;
   align-items: center;
   width: 40%;
+}
+.navbar .logo-wrapper img {
+  opacity: 0;
+}
+#header img.img-logo {
+  height: 75px;
+  position: fixed;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
 }
 .navbar .logo-wrapper .logo-heading {
   margin-left: 15px;
@@ -63,7 +66,6 @@ body {
   color: #F8F8F8;
   font-weight: bold;
   border-bottom: 3px solid transparent;
-  mix-blend-mode: difference;
 }
 
 .navbar .navigation a {
@@ -126,7 +128,7 @@ body {
 
 #work-section {
   height: 100vh;
-  background: #F8F8F8;
+  background-color: #F8F8F8;
   color: #222222;
   min-height: 600px;
   max-height: 700px;

@@ -19,7 +19,7 @@ $(window).scroll(function() {
 });
 
 // navbar color changing
-
+/*
 $(document).ready(function(){
     $(window).scroll(function(){
         if($(window).width() > 1200) {
