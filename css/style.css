@@ -10,6 +10,14 @@ html {
   height: 100%;
 }
 
+.test a {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  color: #F8F8F8;
+  mix-blend-mode: difference;
+}
+
 body {
   color: #F8F8F8;
 }
@@ -55,6 +63,7 @@ body {
   color: #F8F8F8;
   font-weight: bold;
   border-bottom: 3px solid transparent;
+  mix-blend-mode: difference;
 }
 
 .navbar .navigation a {
