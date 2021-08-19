@@ -112,14 +112,15 @@ body {
 
 #about-section {
   background-color: #C3073F;
-  min-height: 450px;
+  height: 425px;
 }
 
 #work-section {
   height: 100vh;
   background: #F8F8F8;
   color: #222222;
-  min-height: 700px;
+  min-height: 600px;
+  max-height: 700px;
 }
 
 #work-section .work-wrapper, #about-section .about-wrapper {
@@ -265,8 +266,7 @@ body {
   position: fixed;
   right: 15px;
   bottom: 15px;
-  background-color: #1A1A1D;
-  mix-blend-mode: difference;
+  background-color: rgba(26, 26, 29, 0.2);
   padding: 10px 12px;
   opacity: 0;
   transform: scale3d(1,1,1);
@@ -280,9 +280,17 @@ a.return-to-top {
   color: white;
 }
 
+a.return-to-top i {
+  transform: scale3d(1,1,1);
+  transition: all .1s .1s ease-in-out;
+}
+
 a.return-to-top:hover {
-  background-color: #C3073F;
-  mix-blend-mode: difference;
+  background-color: rgba(26, 26, 29, 1);
+}
+
+a.return-to-top:hover i {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1400px) {
