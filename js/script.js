@@ -17,6 +17,16 @@ $(window).scroll(function() {
         $(".return-to-top").css({"opacity":"0"});   
     }
 });
+/*$(window).on('scroll', function(){
+    var s = $(window).scrollTop(),
+        d = $(document).height(),
+        c = $(window).height();
+
+    var scrollPercent = (s / (d - c)) * 100;
+
+    console.clear();
+    console.log(scrollPercent);
+})*/
 
 // navbar color changing
 /*

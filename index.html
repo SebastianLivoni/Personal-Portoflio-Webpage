@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Livoni</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
-  <link rel='stylesheet' href='https://necolas.github.io/normalize.css/8.0.1/normalize.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mouseanimation.css">
 
@@ -35,20 +35,32 @@
 <body>
 
   <!-- With inspiration from https://lambocreeper.uk and freeCodeCamp's own example -->
-  <header id="header">
-    <nav class="navbar" id="navbar">
-      <div class="logo-wrapper" onClick="window.location.reload();">
-        <img class="navbar-logo" alt="Personal Logo" src="./img/pb.jpg">
-        <h3 class="logo-heading">Sebastian Livoni</h3>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="/img/pb.jpg" alt="" width="75" height="75" class="d-inline-block align-text-center">Sebastian Livoni
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!--<li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="#work-section">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-section">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-popup">Contact Me</a>
+          </li>
+        </ul>
       </div>
-      <ul class="navigation">
-        <li><a id="test" href="#work-section">My Work</a></li>
-        <li><a href="#about-section">About Me</a></li>
-        <li><a href="#contact-me">Contact Me</a></li>
-      </ul>
-    </nav>
-    <img class="img-logo" alt="Personal Logo" src="./img/pb.jpg">
-  </header>
+    </div>
+  </nav>
   <main>
     <section id="welcome-section">
       <div id="welcome-wrapper">
@@ -125,6 +137,7 @@
   </a>
 
   <!-- partial -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
 
