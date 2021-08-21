@@ -316,7 +316,6 @@ a.return-to-top:hover i {
 
 @media only screen and (max-width: 1400px) {
   .navbar {
-    background-color: var(--darkgray);
     color: white;
   }
   #projects .project-tile img {
