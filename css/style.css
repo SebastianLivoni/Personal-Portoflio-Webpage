@@ -154,13 +154,6 @@ body {
   color: white;
 }
 
-
-@media only screen and (max-height: 400px) {
-  #welcome-section {
-    height: 400px;
-  }
-}
-
 .copyright-wrapper {
   padding: 25px;
   text-align: center;

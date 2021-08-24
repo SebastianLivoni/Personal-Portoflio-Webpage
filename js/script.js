@@ -4,7 +4,7 @@ $("a").click(function() {
     var href = $(this).attr('href');
     $([document.documentElement, document.body]).animate({
         scrollTop: $(href).offset().top
-    }, 250);
+    }, 50);
 });
 
 // Return to top
@@ -17,6 +17,7 @@ $(window).scroll(function() {
         $(".return-to-top").css({"opacity":"0"});   
     }
 });
+
 /*$(window).on('scroll', function(){
     var s = $(window).scrollTop(),
         d = $(document).height(),
