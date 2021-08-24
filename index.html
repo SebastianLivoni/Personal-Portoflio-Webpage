@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/mouseanimation.css">
+  <link rel="stylesheet" href="./css/animations.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./img/favicon/favicon.ico">
@@ -40,7 +40,10 @@
         <img src="/img/pb.jpg" alt="" width="75" height="75" class="d-inline-block align-text-center">Sebastian Livoni
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -64,15 +67,13 @@
     <section id="intro-section" class="container-fluid g-0">
       <div class="intro vh-100 d-flex align-items-center justify-content-center bg-dark">
         <div class="content">
-          <!--<h2 class="animate__animated animate__fadeIn">Hey, I'm Sebastian</h2>
-          <h4 class="animate__animated animate__fadeIn animate__delay-1s">an upcoming full stack developer.</h4>-->
-          <h2 id="typewriter-h2"></h2>
-          <h4 id="typewriter-h4"></h4>
+          <h2 class="animate__animated animate__fadeIn">Hey, I'm Sebastian</h2>
+          <h4 class="animate__animated animate__fadeIn animate__delay-1s">an upcoming full stack developer.</h4>
           <div class="social-icons animate__animated animate__fadeIn animate__delay-2s">
             <a href="https://twitter.com/LivoniSebastian" target="_blank" id="profile-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://github.com/SebastianLivoni" target="_blank" id="profile-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.freecodecamp.org/livoni" target="_blank" data-tooltip="freeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
-            <a href="mailto:contact@livon.dk" target="_blank" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
+            <a href="mailto:contact@livoni.me" target="_blank" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
           </div>
         </div>
       </div>
