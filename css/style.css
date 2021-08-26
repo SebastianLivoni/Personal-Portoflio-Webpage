@@ -109,7 +109,7 @@ body {
 
 #work-section {
   padding: 75px 50px;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
 }
 
 #work-section .col-12 {

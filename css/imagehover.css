@@ -5,6 +5,7 @@ figure.snip1205 {
   overflow: hidden;
   background: #000000;
   text-align: center;
+  border-radius: 5px;
 }
 figure.snip1205 * {
   -webkit-box-sizing: border-box;
