@@ -4,8 +4,10 @@
   --white: #F8F8F8;
   --red: #C3073F;
   --darkgray: #1A1A1D;
+  --darkblack: #161616;
   --lightgray: #222222;
   --cyan: #00D5B5;
+  --animate-duration: 2s;
 }
 
 * {
@@ -102,6 +104,67 @@ body {
 
 /* Intro page end */
 
+/* Work-section */
+
+.bg-light {
+  color: var(--white);
+  background-color: var(--darkblack) !important;
+}
+
+.vcenter-item {
+  min-height: 100vh;
+  display: flex;
+  margin: 0 auto;
+}
+
+#work-section {
+  padding: 150px 50px;
+}
+
+#work-section a {
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--white)
+}
+
+#work-section a:hover {
+  color: var(--cyan);
+}
+
+#work-section .project-wrapper .content {
+  position: relative;
+}
+
+#work-section .project-wrapper .project-img {
+  float: right;
+  width: 41.66%;
+}
+#work-section .project-wrapper img.d-sm-none {
+  margin: 10px 0;
+}
+
+
+/* Buttons */
+.btn.btn-outline-red {
+  border-color: var(--cyan);
+  color: var(--cyan)
+}
+.btn.btn-outline-red.active, .btn.btn-outline-red:hover {
+  background-color: var(--cyan);
+  color: var(--white)
+}
+
+.btn.btn-github {
+  background-color: var(--lightgray);
+  color: var(--white)
+}
+.btn.btn-github:hover {
+  background-color: var(--cyan);
+}
+
+/* Work-section end */
+
+/*
 #about-section {
   background-color: var(--red);
   height: 425px;
@@ -157,13 +220,6 @@ body {
   padding: 20px 0;
   background-color: var(--darkgray);
   color: white;
-}
-
-.copyright-wrapper {
-  padding: 25px;
-  text-align: center;
-  background-color: var(--darkgray)
-}
 
 .aboutme {
   width: 500px;
@@ -173,6 +229,13 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: 200;
+}
+}*/
+
+.copyright-wrapper {
+  padding: 25px;
+  text-align: center;
+  background-color: var(--darkgray)
 }
 
 /* Tooltip */
