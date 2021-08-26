@@ -234,6 +234,10 @@ body {
   background-color: var(--darkgray)
 }
 
+.copyright-wrapper p {
+  margin-bottom: 0px;
+}
+
 /* Tooltip */
 
 [data-tooltip] {
