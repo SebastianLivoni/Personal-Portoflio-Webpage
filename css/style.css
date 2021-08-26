@@ -98,27 +98,23 @@ body {
   color: var(--red);
 }
 
-.Typewriter__cursor {
-  display: none;
-}
-
 /* Intro page end */
 
-/* Work-section */
+/* Work-section / recent projects */
 
 .bg-light {
   color: var(--white);
   background-color: var(--darkblack) !important;
 }
 
-.vcenter-item {
+#work-section {
+  padding: 75px 50px;
   min-height: 100vh;
-  display: flex;
-  margin: 0 auto;
 }
 
-#work-section {
-  padding: 150px 50px;
+#work-section .col-12 {
+  display: flex;
+  justify-content: center;
 }
 
 #work-section a {
@@ -131,16 +127,12 @@ body {
   color: var(--cyan);
 }
 
-#work-section .project-wrapper .content {
-  position: relative;
+#work-section .card {
+  background-color: transparent;
 }
 
-#work-section .project-wrapper .project-img {
-  float: right;
-  width: 41.66%;
-}
-#work-section .project-wrapper img.d-sm-none {
-  margin: 10px 0;
+#work-section .card p {
+  margin: 15px 0 0 0;
 }
 
 
@@ -161,6 +153,10 @@ body {
 .btn.btn-github:hover {
   background-color: var(--cyan);
 }
+
+/* Modal */
+
+
 
 /* Work-section end */
 
@@ -360,3 +356,5 @@ i.fa-heart {
     transform: scale(1);
   }
 }
+
+

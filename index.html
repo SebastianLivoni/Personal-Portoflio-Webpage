@@ -6,6 +6,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="./css/imagehover.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animations.css">
 
@@ -72,54 +73,82 @@
         </div>
       </div>
     </section>
-    <section id="work-section" class="container-fluid g-0 bg-light vcenter-item">
+    <section id="work-section" class="container-fluid g-0 bg-light">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <h3>My Recent Projects</h3>
+        <div class="header-nav text-center">
+          <h3>My Recent Projects</h3>
+          <div class="btn-group mt-4" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-red active">All</button>
+            <button type="button" class="btn btn-outline-red">Python</button>
+            <button type="button" class="btn btn-outline-red">JavaScript</button>
+            <button type="button" class="btn btn-outline-red">HTML/CSS</button>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline-red active">All</button>
-              <button type="button" class="btn btn-outline-red">Python</button>
-              <button type="button" class="btn btn-outline-red">JavaScript</button>
-              <button type="button" class="btn btn-outline-red">HTML/CSS</button>
-            </div>
-            <div class="projects mt-4">
-              <div class="project-wrapper">
-                <div class="content">
-                  <img src="/img/personal_portfolio.png" class="rounded project-img img-fluid d-block d-none d-sm-block" >
-                  <h4>yoda</h4>
-                  <p>Dette er mega awesome det jeg har lavet - det er mega fed</p>
-                  <p class="tags"><a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
-                  <img src="/img/personal_portfolio.png" class="rounded img-fluid d-block d-sm-none">
-                  <button href="#" class="btn btn-github"><i class="fab fa-github"></i> Code</button>
+        </div>
+        <div class="row projects mt-5">
+          <div class="col-12 col-xl-6">
+            <div class="card project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <figure class="snip1205 green">
+                    <img src="https://via.placeholder.com/600x500" class="img-fluid rounded" alt="sample43"/>
+                    <i class="ion-search"></i>
+                    <a href="#"></a>
+                  </figure>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio website</h5>
+                    <p class="card-text">A challenge from freeCodeCamp in Web Development</p>
+                    <p class="tags">Tags: <a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
+                  </div>
                 </div>
               </div>
-              <div class="project-wrapper mt-3">
-                <h4>yoda</h4>
-                <p>Dette er mega awesome det jeg har lavet - det er mega fed</p>
-                <p class="tags"><a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
-                <button href="#" class="btn btn-github"><i class="fab fa-github"></i> Code</button>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="https://via.placeholder.com/600x500" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio website</h5>
+                    <p class="card-text">A challenge from freeCodeCamp in Web Development</p>
+                    <p class="tags">Tags: <a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
+                  </div>
+                </div>
               </div>
-              <div class="project-wrapper mt-3">
-                <h4>yoda</h4>
-                <p>Dette er mega awesome det jeg har lavet - det er mega fed</p>
-                <p class="tags"><a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
-                <button href="#" class="btn btn-github"><i class="fab fa-github"></i> Code</button>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="https://via.placeholder.com/600x500" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio website</h5>
+                    <p class="card-text">A challenge from freeCodeCamp in Web Development</p>
+                    <p class="tags">Tags: <a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
+                  </div>
+                </div>
               </div>
-              <div class="project-wrapper mt-3">
-                <h4>yoda</h4>
-                <p>Dette er mega awesome det jeg har lavet - det er mega fed</p>
-                <p class="tags"><a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
-                <button href="#" class="btn btn-github"><i class="fab fa-github"></i> Code</button>
-              </div>
-              <div class="btn-toolbar mt-4" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group me-2" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-outline-red active">1</button>
-                  <button type="button" class="btn btn-outline-red">2</button>
-                  <button type="button" class="btn btn-outline-red">3</button>
-                  <button type="button" class="btn btn-outline-red">4</button>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="https://via.placeholder.com/600x500" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio website</h5>
+                    <p class="card-text">A challenge from freeCodeCamp in Web Development</p>
+                    <p class="tags">Tags: <a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,41 +156,6 @@
         </div>
       </div>
     </section>
-    <!--<section id="work-section">
-      <div class="work-wrapper">
-        <header>
-          <h1>These are some of my projects</h1>
-        </header>
-      </div>
-      <div id="projects">
-        <a href="https://codepen.io/sebastianlivoni/full/qBmwJGe" target="_blank">
-          <div class="project-tile">
-            <div class="img-div">
-              <img src="./img/tribute_page.png">
-            </div>
-            <div class="project-title">
-              <p>Tribute Page</p>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project-tile">
-            <div class="img-div">
-              <img src="./img/personal_portfolio.png">
-            </div>
-            <div class="project-title">
-              <p>Personal Portfolio</p>
-            </div>
-          </div>
-        </a>
-        <div class="project-tile">
-          <img src="https://via.placeholder.com/350">
-          <div class="project-title">
-            <p>TBA</p>
-          </div>
-        </div>
-      </div>
-    </section>-->
     <!--<section id="about-section">
       <div class="about-wrapper">
         <header>
