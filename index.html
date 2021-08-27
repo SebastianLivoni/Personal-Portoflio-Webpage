@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <title>Livoni</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
-  <link rel='stylesheet' href='https://necolas.github.io/normalize.css/8.0.1/normalize.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="./css/imagehover.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/mouseanimation.css">
+  <link rel="stylesheet" href="./css/animations.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./img/favicon/favicon.ico">
@@ -33,76 +35,134 @@
 </head>
 
 <body>
-
-  <!-- With inspiration from https://lambocreeper.uk and freeCodeCamp's own example -->
-  <header id="header">
-    <nav class="navbar" id="navbar">
-      <div class="logo-wrapper" onClick="window.location.reload();">
-        <img class="navbar-logo" alt="Personal Logo" src="./img/pb.jpg">
-        <h3 class="logo-heading">Sebastian Livoni</h3>
-      </div>
-      <ul class="navigation">
-        <li><a id="test" href="#work-section">My Work</a></li>
-        <li><a href="#about-section">About Me</a></li>
-        <li><a href="#contact-me">Contact Me</a></li>
-      </ul>
-    </nav>
-    <img class="img-logo" alt="Personal Logo" src="./img/pb.jpg">
-  </header>
-  <main>
-    <section id="welcome-section">
-      <div id="welcome-wrapper">
-        <div class="welcome-content">
-          <h1>Hey, I'm Sebastian</h1>
-          <h2>an upcoming full stack developer.</h2>
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top animate__animated animate__fadeIn">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#intro-section">
+        <img src="/img/pb.jpg" alt="" width="75" height="75" class="d-inline-block align-text-center">Sebastian Livoni
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-        <div class="welcome-social">
-          <p>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!--<li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>-->
+          <li class="nav-item"><a class="nav-link" href="#work-section">My Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-section">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-popup">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="intro-section" class="container-fluid g-0">
+      <div class="intro vh-100 d-flex align-items-center justify-content-center bg-dark">
+        <div class="content">
+          <h2 class="animate__animated animate__fadeIn">Hey, I'm Sebastian</h2>
+          <h4 class="animate__animated animate__fadeIn animate__delay-1s">an upcoming full stack developer.</h4>
+          <div class="social-icons animate__animated animate__fadeIn animate__delay-2s">
             <a href="https://twitter.com/LivoniSebastian" target="_blank" id="profile-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://github.com/SebastianLivoni" target="_blank" id="profile-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.freecodecamp.org/livoni" data-tooltip="freeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
-            <a href="mailto:contact@livon.dk" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
-          </p>
+            <a href="https://www.freecodecamp.org/livoni" target="_blank" data-tooltip="freeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
+            <a href="mailto:sebastian@livoni.me" target="_blank" data-tooltip="Send me a email"><i class="fas fa-at"></i></a>
+          </div>
         </div>
       </div>
-      <a href="#work-section"><div class="mouse"></div></a>
     </section>
-    <section id="work-section">
-      <div class="work-wrapper">
-        <header>
-          <h1>These are some of my projects</h1>
-        </header>
-      </div>
-      <div id="projects">
-        <a href="https://codepen.io/sebastianlivoni/full/qBmwJGe" target="_blank">
-          <div class="project-tile">
-            <div class="img-div">
-              <img src="./img/tribute_page.png">
-            </div>
-            <div class="project-title">
-              <p>Tribute Page</p>
+    <section id="work-section" class="container-fluid g-0 bg-light">
+      <div class="container">
+        <h3 class="text-center">My Recent Projects</h3>
+        <div class="text-center sticky-top" style="z-index: 1040;">
+          <div class="btn-group mt-4" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-red active">All</button>
+            <button type="button" class="btn btn-outline-red">Python</button>
+            <button type="button" class="btn btn-outline-red">C++</button>
+            <button type="button" class="btn btn-outline-red">JavaScript</button>
+            <button type="button" class="btn btn-outline-red">HTML/CSS</button>
+          </div>
+        </div>
+        <div class="row projects mt-5">
+          <div class="col-12 col-xl-6">
+            <div class="project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <figure class="snip1205 navy">
+                    <img src="/img/personal_portfolio_600x500.png" class="img-fluid" alt="sample43"/>
+                    <i class="ion-search"></i>
+                    <a href="https://codepen.io/sebastianlivoni/full/xxdNOmZ" target="_blank"></a>
+                  </figure>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio website</h5>
+                    <p class="card-text">A challenge from freeCodeCamp in Web Development</p>
+                    <p class="tags">Tags: <a class="tag">CSS</a>, <a class="tag">Design</a>, <a class="tag">Web</a>, <a class="tag">JavaScript</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </a>
-        <a href="#">
-          <div class="project-tile">
-            <div class="img-div">
-              <img src="./img/personal_portfolio.png">
-            </div>
-            <div class="project-title">
-              <p>Personal Portfolio</p>
+          <div class="col-12 col-xl-6">
+            <div class="project-wrapper mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <figure class="snip1205 navy">
+                    <img src="/img/ikqra03zdnggljdu5vv0.png" class="img-fluid" alt="sample43"/>
+                    <i class="ion-search"></i>
+                    <a href="https://freecodecamp.org/certification/livoni/responsive-web-design" target="_blank"></a>
+                  </figure>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">freeCodeCamp</h5>
+                    <p class="card-text">Developer Certification: Completed Responsive Web Design </p>
+                    <p class="tags">Tags: <a class="tag">freeCodeCamp</a>, <a class="tag">Certificate</a>, <a class="tag">Web</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </a>
-        <!--<div class="project-tile">
-          <img src="https://via.placeholder.com/350">
-          <div class="project-title">
-            <p>TBA</p>
-          </div>
-        </div>-->
+        </div>
       </div>
     </section>
     <section id="about-section">
+      <div class="container text-center">
+        <div class="headline">
+          <h3 class="">Who am I?</h3>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 col-lg-6">
+            <div class="box">
+              <h2>My goal</h2>
+              <p>You newer know what the future brings - but I dream of making my hobby my job in the near future. That would be awesome!</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="box">
+              <h2>My skills</h2>
+              <p>Right now I'm learning JavaScript, Python and C but my plan is to gain knowledge of several languages.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="box">
+              <h2>My life</h2>
+              <p>In addition to programming, I play football and occasionally I go for a run in the woods.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="box">
+              <h2>Curriculum</h2>
+              <p>Math at Aalborg Business College (2018 - 2021) and Computer Science at Aalborg University (2021 - 2026)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--<section id="about-section">
       <div class="about-wrapper">
         <header>
           <h1><span>Who am I?</span></h1>
@@ -111,7 +171,7 @@
       <div class="aboutme">
         <p>I'm Sebastian <strong style="font-weight: bold;">Livoni</strong>, a 19-year-old guy from Denmark who is in the process of learning full stack development. I have a great interest in all kinds of music and enjoy playing simulation games and Minecraft.</p>
       </div>
-    </section>
+    </section>-->
   </main>
 
   <footer>
@@ -120,12 +180,19 @@
     </div>
   </footer>
 
-  <a class="return-to-top" href="#welcome-section">
+  <a class="return-to-top" href="#intro-section">
     <i class="fas fa-arrow-up"></i>
   </a>
 
-  <!-- partial -->
+  <!-- Bootstrap partial -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Typewriter -->
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="js/typeeffect.js"></script>
+
+  <!-- Own Script.js -->
   <script src="js/script.js"></script>
 
 </body>

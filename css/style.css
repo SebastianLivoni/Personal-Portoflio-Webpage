@@ -4,8 +4,10 @@
   --white: #F8F8F8;
   --red: #C3073F;
   --darkgray: #1A1A1D;
+  --darkblack: #161616;
   --lightgray: #222222;
   --cyan: #00D5B5;
+  --animate-duration: 2s;
 }
 
 * {
@@ -14,186 +16,208 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   font-family: 'Comfortaa', cursive;
   height: 100%;
 }
 
 body {
   color: var(--white);
+  background-color: var(--darkgray);
 }
 
-.navbar {
-  display: flex;
-  width: 100%;
-  height: 85px;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  padding: 10px 10px 10px 5px;
-  position: fixed;
-  mix-blend-mode: difference;
-}
+/* Navbar */
 
-#projects a {
-  text-decoration: none;
+.bg-transparent {
+  background-color: transparent !important;
 }
-
-.navbar .logo-wrapper {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  cursor: pointer;
-}
-.navbar .logo-wrapper img {
-  opacity: 0;
-}
-#header img.img-logo {
-  height: 75px;
-  position: fixed;
-  border-radius: 50%;
-  top: 5px;
-  left: 10px;
-}
-.navbar .logo-wrapper .logo-heading {
-  margin-left: 15px;
-}
-.navbar .navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 60%;
-}
-.navbar .navigation li {
-  display: flex;
-  list-style: none;
-  padding: 12px 15px;
-}
-.navbar .navigation li a {
-  text-decoration: none;
-  color: var(--white);
+.navbar-dark li a {
+  color: var(--white) !important;
   font-weight: bold;
+}
+.navbar-nav .nav-link {
+  padding-right: .9rem !important;
+  padding-left: .9rem !important;
+}
+.navbar-brand img {
+  border-radius: 50%;
+  margin-right: .9rem !important
+}
+
+.nav-link {
+  border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
 
-.navbar .navigation a {
-  position: relative;
+.nav-link:after {
+  content: ""; /* This is necessary for the pseudo element to work. */ 
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 0%; /* Change this to whatever width you want. */
+  border-bottom: 3px solid transparent; /* This creates the border. Replace black with whatever color you want. */
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+@media (min-width: 767.98px) {
+  .nav-link:hover:after {
+    border-bottom: 3px solid var(--red);
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .nav-link:hover {
+    color: var(--red) !important;
+  }
 }
 
-.navbar .navigation li a:after {
-  content: '';
-  display: block;
-  border-bottom: 3px solid var(--red);
-  width: 0;
-  position: absolute;
-  left: 0;
-  margin-top: 4px;
+.navbar-toggler {
+  border: 0;
+  outline: 0;
+  font-size: 25px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  color: var(--white) !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler:hover {
+  color: var(--red);
+}
+
+/* Navbar end */
+
+/* Intro page */
+.bg-dark {
+  background-color: var(--darkgray) !important;
+}
+
+.social-icons i {
+  color: var(--white);
+}
+.social-icons i:hover {
+  color: var(--red);
+}
+
+/* Intro page end */
+
+/* Work-section / recent projects */
+
+.bg-light {
+  color: var(--white);
+  background-color: var(--darkblack) !important;
+}
+
+#work-section {
+  padding: 75px 50px;
+  /*min-height: 100vh;*/
+}
+
+#work-section .col-12 {
+  display: flex;
+  justify-content: center;
+}
+
+#work-section a {
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--white)
+}
+
+#work-section a:hover {
+  color: var(--cyan);
+}
+
+#work-section .card {
+  background-color: transparent;
+}
+
+#work-section .card p {
+  margin: 15px 0 0 0;
+}
+
+
+/* Buttons */
+.btn.btn-outline-red {
+  border-color: var(--cyan);
+  color: var(--cyan)
+}
+.btn.btn-outline-red.active, .btn.btn-outline-red:hover {
+  background-color: var(--cyan);
+  color: var(--white)
+}
+
+.btn.btn-github {
+  background-color: var(--lightgray);
+  color: var(--white)
+}
+.btn.btn-github:hover {
+  background-color: var(--cyan);
+}
+
+/* Work-section end */
+
+/* About-section */
+
+#about-section {
+  background-color: #C3073F;
+  padding: 75px;
+}
+#about-section .col-12 {
+  display: flex;
+  justify-content: center;
+}
+#about-section .box {
+  padding: 15px 35px;
+  width: 350px;
+}
+#about-section .box p {
+  font-size: 1.2rem;
+}
+#about-section .box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.return-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background-color: var(--cyan);
+  padding: 10px 12px;
+  opacity: 0;
+  transform: scale3d(1,1,1);
+  transition: all .1s ease-in-out;
+}
+
+a.return-to-top {
+  text-decoration: none;
+  color: white;
+}
+
+a.return-to-top:hover {
+  background-color: var(--cyan);
+}
+
+i.fa-heart {
+  animation: heartBeat 2s infinite;
+  -webkit-animation: heartBeat 2s infinite;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.navbar .navigation li a:hover:after {
-  width: 100%;
-}
-
-.navbar-logo {
-  border-radius: 50%;
-  height: 75px;
-  width: auto;
-}
-
-#welcome-section {
-  display: flex;
-  height: 100vh;
-  background: var(--darkgray);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#welcome-section h1 {
-  font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-#welcome-section h2 {
-  font-size: 1.5em;
-}
-
-.welcome-social p {
-  margin-top: 15px;
-}
-.welcome-social i {
-  color: var(--white);
-}
-.welcome-social i:hover {
-  color: var(--red);
-}
-
-#about-section {
-  background-color: var(--red);
-  height: 425px;
-}
-
-#work-section {
-  height: 100vh;
-  background-color: var(--white);
-  color: var(--lightgray);
-  min-height: 600px;
-  max-height: 700px;
-}
-
-#work-section .work-wrapper, #about-section .about-wrapper {
-  display: flex;
-  justify-content: center;
-}
-#work-section .work-wrapper header, #about-section .about-wrapper header {
-  margin-top: 55px;
-  width: 540px;
-  text-align: center;
-}
-#work-section .work-wrapper header h1 {
-  justify-content: center;
-  font-size: 2em;
-  border-bottom: 2px solid var(--lightgray);
-}
-
-#about-section .about-wrapper h1 span {
-  justify-content: center;
-  border-bottom: 2px solid white;
-}
-
-#projects {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-#projects .project-tile {
-  background-color: var(--darkgray);
-  margin: 0 20px;
-}
-
-#projects .project-tile img {
-  height: 350px;
-  width: 350px;
-  object-fit: cover;
-}
-
-
-#projects .project-title {
-  text-align: center;
-  padding: 20px 0;
-  background-color: var(--darkgray);
-  color: white;
-}
-
-
-@media only screen and (max-height: 400px) {
-  #welcome-section {
-    height: 400px;
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1);
   }
 }
+
 
 .copyright-wrapper {
   padding: 25px;
@@ -201,14 +225,8 @@ body {
   background-color: var(--darkgray)
 }
 
-.aboutme {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: center;
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-weight: 200;
+.copyright-wrapper p {
+  margin-bottom: 0px;
 }
 
 /* Tooltip */
@@ -252,8 +270,6 @@ body {
   white-space: nowrap;
 }
 
-
-
 /* Triangle hack to make tooltip look like a speech bubble */
 [data-tooltip]:after {
   position: absolute;
@@ -281,74 +297,4 @@ body {
   opacity: 1;
   transform: scale3d(1,1,1);
   transition: all .2s .1s ease-in-out;
-}
-
-
-.return-to-top {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  background-color: rgba(26, 26, 29, 0.2);
-  padding: 10px 12px;
-  opacity: 0;
-  transform: scale3d(1,1,1);
-  transition: all .1s .1s ease-in-out;
-  animation: popout .1s ease;
-  -webkit-animation: popout .1s ease;
-}
-
-a.return-to-top {
-  text-decoration: none;
-  color: white;
-}
-
-a.return-to-top i {
-  transform: scale3d(1,1,1);
-  transition: all .1s .1s ease-in-out;
-}
-
-a.return-to-top:hover {
-  background-color: rgba(26, 26, 29, 1);
-}
-
-a.return-to-top:hover i {
-  transform: scale(1.1);
-}
-
-@media only screen and (max-width: 1400px) {
-  .navbar {
-    color: white;
-  }
-  #projects .project-tile img {
-    height: 250px;
-    width: 250px;
-  }
-
-  .navbar .logo-wrapper .logo-heading {
-    font-size: 14px;
-  } 
-
-  .navbar .navigation a {
-    font-size: 14px;
-  }
-}
-
-i.fa-heart {
-  animation: heartBeat 2s infinite;
-  -webkit-animation: heartBeat 2s infinite;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-}
-
-
-@keyframes heartBeat {
-  0% {
-    transform: scale(1);
-  }
-  15% {
-    transform: scale(1.3);
-  }
-  30% {
-    transform: scale(1);
-  }
 }
