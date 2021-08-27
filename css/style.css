@@ -157,6 +157,27 @@ body {
 
 /* Work-section end */
 
+/* About-section */
+
+#about-section {
+  background-color: #C3073F;
+  padding: 75px;
+}
+#about-section .col-12 {
+  display: flex;
+  justify-content: center;
+}
+#about-section .box {
+  padding: 15px 35px;
+  width: 350px;
+}
+#about-section .box p {
+  font-size: 1.2rem;
+}
+#about-section .box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
 
 .return-to-top {
   position: fixed;
